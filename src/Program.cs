@@ -5,21 +5,21 @@ namespace Program
 {
     class Program
     {
-        private static Properties? P;
-        public static void init()
-        {
-            P = Properties.GetProperties();
-        }
-
         public static void Main(string[] args)
         {
-            init();
+            // for (int i = 0; i < 9; i++)
+            // {
+            //     var user = new User("Username" + i, "Email" + i, "Password");
+            //     UserManager.createUser(user);
+            //     Console.WriteLine("created user " + (i + 1));
+            // }
+
             var ul = UserManager.getUsers();
 
             if (ul != null)
             {
                 ul.ForEach(delegate(User i) {
-                    Console.WriteLine(i);
+                    Console.WriteLine(i.Id);
                 });
             }
         }

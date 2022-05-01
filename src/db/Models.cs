@@ -14,8 +14,6 @@ namespace Models
             Username = username;
             Email = email;
             Password = password;
-
-            Console.WriteLine("Construtor invocado");
         }
 
         public override string ToString()
